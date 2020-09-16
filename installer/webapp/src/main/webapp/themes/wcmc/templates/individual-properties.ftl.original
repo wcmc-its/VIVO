@@ -1,0 +1,285 @@
+<#--
+Copyright (c) 2013, Cornell University
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+    * Redistributions of source code must retain the above copyright notice,
+      this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright notice,
+      this list of conditions and the following disclaimer in the documentation
+      and/or other materials provided with the distribution.
+    * Neither the name of Cornell University nor the names of its contributors
+      may be used to endorse or promote products derived from this software
+      without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<#-- Template for property listing on individual profile page -->
+
+<#import "lib-properties.ftl" as p>
+<#assign subjectUri = individual.controlPanelUrl()?split("=") >
+<#assign coAuthorVisUrl = individual.coAuthorVisUrl() >
+<#assign coInvestigatorVisUrl = individual.coInvestigatorVisUrl()>
+
+<script src="/vivo/js/jquery-1.9.1.js"></script>
+<script src="/vivo/js/jquery_plugins/jquery.tinysort-1.5.6.min.js"></script>
+
+<#list propertyGroups.all as group>
+    <#assign groupName = group.getName(nameForOtherGroup)>
+    <#assign verbose = (verbosePropertySwitch.currentValue)!false>
+    <section class="property-group" role="region">
+        <nav class="scroll-up" role="navigation">
+            <a href="#branding" title="scroll up">
+                <img src="${urls.images}/individual/scroll-up.gif" alt="scroll to property group menus" />
+            </a>
+        </nav>
+        
+        <#-- Display the group heading --> 
+        <#assign groupNameHtmlId="">
+        <#if groupName?has_content>
+    		<#--the function replaces spaces in the name with underscores, also called for the property group menu-->
+        	<#assign groupNameHtmlId = p.createPropertyGroupHtmlId(groupName) >
+            <h2 id="${groupNameHtmlId}">${groupName?capitalize}</h2>
+            
+        <#if groupNameHtmlId == "publications">
+            <div class="group-controls">
+            <#list group.properties as property>
+                <#-- List the statements for each property -->
+                <!-- eliza: hack -->
+                <!-- previously authorInAuthorship -->
+                
+                <#if "${property.localName}" == "relatedBy">
+                <span>Sort by</span>
+                    <select id="dropdown_options" class="button" title="Sort by">
+                        <option value="newest" selected>Newest</option>
+                        <option value="oldest">Oldest</option>
+                        <option value="citation">Times Cited</option>
+                        <option value="pubtype">Publication Type</option>
+                        <option value="pubname">Journal Name</option>
+                    </select>
+                </#if>
+                <#if property.localName == "relatedBy" && editable  >
+                    <#-- <a id="managePubLink" class="manageLinks button ss-view right" href="${urls.base}/managePublications?subjectUri=${subjectUri[1]!}" title="manage publications">
+                        hide/show publications
+                    </a> -->
+                </#if>
+                <#-- This might be unnecessary but it has the right classes/formatting -->
+ <#--                <a id="managePubLink" class="manageLinks button ss-view right" href="#" title="Hide/Show">Hide/Show</a> -->
+            </#list>
+                <div id="coauthorship_link_container" class="collaboratorship-link-container">
+                
+                    <div class="collaboratorship-icon">
+                        <a href="${coAuthorVisUrl}" class="button ss-globe right" title="co-author">Co-Author Network</a>                                              
+                        <!-- Add edit article link to Drupal feedback form -->
+                        <#if editable> 
+                        <#assign cwidValue = "${coAuthorVisUrl}"?replace("/vis/author-network/cwid-", "")?replace("/vivo", "") />
+                        <div class="edit-article"></div>
+                        <script type="text/javascript">
+                        var currDomain = document.domain;
+                        if (currDomain == "vivo-stage.med.cornell.edu" || currDomain == "vivo-dev.med.cornell.edu") {
+                                $('div.edit-article').wrap('<a href="http://vivo-stage.med.cornell.edu:8001/?q=publicationfeedback/cwid=${cwidValue}" class="button ss-globe right" title="edit-article" target="_blank">Edit Article</a>');
+                        }else if (currDomain == "vivo.med.cornell.edu") {
+                                $('div.edit-article').wrap('<a href="http://vivo.med.cornell.edu:8001/?q=publicationfeedback/cwid=${cwidValue}" class="button ss-globe right" title="edit-article" target="_blank">Edit Article</a>');
+                        } else {
+                                $('div.edit-article').wrap('<a href="http://vivo-stage.med.cornell.edu:8001/?q=publicationfeedback/cwid=${cwidValue}" class="button ss-globe right" title="edit-article" target="_blank">Edit Article</a>');
+                        }
+                        </script>
+                        </#if>                        
+                    </div>
+                    
+                    <!-- Add edit article link to Drupal feedback form 
+                    <#if editable> 
+                    	<#assign cwidValue = "${coAuthorVisUrl}"?replace("/vis/author-network/cwid-", "")?replace("/vivo", "") />
+                        <script type="text/javascript">
+                        	var currDomain = document.domain;
+                        	if (currDomain == "vivo-stage.med.cornell.edu" || currDomain == "vivo-dev.med.cornell.edu") {
+                        		
+                        		$(".collaboratorship-icon").append('<a href="http://'+ currDomain +':8001/?q=publicationfeedback/cwid=${cwidValue}" class="button ss-globe right" title="edit-articles" target="_blank">Edit Articles</a>');
+                        	} else if (currDomain == "vivo.med.cornell.edu") {
+                        		$(".collaboratorship-icon").append('<a href="http://'+ currDomain +':8001/?q=publicationfeedback/cwid=${cwidValue}" class="button ss-globe right" title="edit-articles" target="_blank">Edit Articles</a>');
+                        	} else {
+                        		$(".collaboratorship-icon").append('<a href="http://vivo-stage.med.cornell.edu:8001/?q=publicationfeedback/cwid=${cwidValue}" class="button ss-globe right" title="edit-articles" target="_blank">Edit Articles</a>');
+                        	}
+                        </script>
+                 	</#if>
+                 	--> 
+                   
+                </div>
+            </div>
+        </#if>
+        <#if groupNameHtmlId == "research">
+            <div class="group-controls">
+            <#list group.properties as property>
+                <#if property.localName == "hasResearcherRole" && editable  >
+                    <a id="manageGrantLink" class="manageLinks" href="${urls.base}/manageGrants?subjectUri=${subjectUri[1]!}" title="manage grants & projects">
+                        hide/show grants & projects <span class="ss-view"></span>
+                    </a>
+                </#if>
+            </#list>
+            <span>Sort by</span>
+            <select id="research_dropdown_options" class="button" title="Sort by">
+                <option value="newest" selected>Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="researchrole">Researcher Role</option>
+            </select>
+            <div id="coinvestigator_link_container" class="collaboratorship-link-container">
+                <div class="collaboratorship-icon">
+                    <a class="button ss-globe right" href="${coInvestigatorVisUrl}" title="co-investigator network">Co-investigator Network</a>
+                </div>
+
+            </div>
+            </div>
+        </#if>
+        <#else>
+            <h2 id="properties">Properties</h2>
+        </#if>
+        
+        <#-- List the properties in the group -->
+        <#assign numResearchList = 0 />
+        <#list group.properties as property>
+        
+        	<#if groupNameHtmlId == "research">
+        		<#if (numResearchList == 0) >
+        			<!-- Should only display one article tag and one ul tag for all grant data -->
+        			<article class="property" role="article">
+        			<h3 id="authorInAuthorship">Select federal grants awarded</h3>
+        			<ul class="property-list" role="list" id="researchRoleList">
+        			<#assign numResearchList = numResearchList + 1 />
+        		</#if>
+        	<#else>
+        		<article class="property" role="article">
+        	</#if>
+
+            	<!-- eliza: hack -->
+            	<!-- previously authorInAuthorship -->
+                <#if groupNameHtmlId == "publications" && "${property.localName}" == "relatedBy">
+					<script type="text/javascript">
+
+
+						$('#dropdown_options').on('change', function (e) {
+							var len = $('ul#${property.localName}List>li').size();
+							if (len > 5) {
+								$('ul#${property.localName}List li:gt(5)').show();
+							}
+						    var optionSelected = $("option:selected", this);
+						    var valueSelected = this.value;
+						    if (valueSelected == 'oldest') {
+								$('ul#${property.localName}List>li').tsort({attr:'datetime'});
+						    } else if (valueSelected == 'newest') {
+								$('ul#${property.localName}List>li').tsort({order:'desc',attr:'datetime'});
+						    } else if (valueSelected == 'citation') {
+								$('ul#${property.localName}List>li').tsort({order:'desc',attr:'citation'});
+						    } else if (valueSelected == 'pubtype') {
+								$('ul#${property.localName}List>li').tsort({attr:'pubname'}).tsort({attr:'pubtype'});
+						    } else if (valueSelected == 'pubname') {
+								$('ul#${property.localName}List>li').tsort({attr:'pubtype'}).tsort({attr:'pubname'});
+						    }
+						    if (len > 5) {
+								$('ul#${property.localName}List li:gt(5)').hide();
+								$("#lessLongList${property.localName}").hide();
+								$("#moreLongList${property.localName}").show();
+							}
+						});
+					</script>
+				</#if>
+        		
+                <#-- Property display name -->
+                <!-- previously authorInAuthorship -->
+                <#if groupNameHtmlId == "publications" && property.localName == "relatedBy" && editable  >
+                    <h3 id="${property.localName}">${property.name} <@p.addLink property editable /> <@p.verboseDisplay property /> 
+                        <#-- <a id="managePubLink" class="manageLinks button" href="${urls.base}/managePublications?subjectUri=${subjectUri[1]!}" title="manage publications" <#if verbose>style="padding-top:10px"</#if> >
+                            hide/show publications <span class="ss-view"></span>
+                        </a> -->
+                    </h3>          
+                    
+                <#elseif property.localName == "hasResearcherRole" && editable  >
+                <h3 id="${property.localName}">${property.name} <@p.addLink property editable /> <@p.verboseDisplay property /> 
+                    <#-- <a id="manageGrantLink" class="manageLinks" href="${urls.base}/manageGrants?subjectUri=${subjectUri[1]!}" title="manage grants & projects" <#if verbose>style="padding-top:10px"</#if> >
+                        manage grants & projects
+                    </a> -->
+                </h3>
+                <#elseif property.localName == "organizationForPosition" && editable  >
+                <h3 id="${property.localName}">${property.name} <@p.addLink property editable /> <@p.verboseDisplay property /> 
+                    <a id="managePeopleLink" class="manageLinks" href="${urls.base}/managePeople?subjectUri=${subjectUri[1]!}" title="manage people" <#if verbose>style="padding-top:10px"</#if> >
+                        manage affiliated people
+                    </a>
+                </h3>
+                
+                <#else>
+                	<!-- eliza: hack -->
+                	<#if property.localName != "hasAgreementPersonnelRole" && property.localName != "hasKeyPersonnelRole" && property.localName != "hasPrincipalInvestigatorRole" >
+                		<h3 id="${property.localName}">${property.name} <@p.addLink property editable /> <@p.verboseDisplay property /> </h3>
+                	</#if>
+                </#if>
+
+
+				<#if property.localName == "hasAgreementPersonnelRole" || property.localName == "hasKeyPersonnelRole" || property.localName == "hasPrincipalInvestigatorRole" >
+	                    <#-- data property -->
+	                    <#if property.type == "data">
+	                        <@p.dataPropertyList property editable />
+	                    <#-- object property -->
+	                    <#else>
+	                        <@p.objectProperty property editable />
+	                    </#if>
+                <#else>
+                	<!-- <a name="${property.localName}" /> -->
+	                <ul class="property-list" role="list" id="${property.localName}List">
+	                    <#-- data property -->
+	                    <#if property.type == "data">
+	                        <@p.dataPropertyList property editable />
+	                    <#-- object property -->
+	                    <#else>
+	                        <@p.objectProperty property editable />
+	                    </#if>
+	                </ul>
+                </#if>
+
+				<!-- previously authorInAuthorship -->
+				<#if groupNameHtmlId == "publications" && "${property.localName}" == "relatedBy">
+        			<p>
+    					<div id="moreLongList${property.localName}"><a class="moreless-type" href="#${property.localName}">more ...</a></div>
+    					<div id="lessLongList${property.localName}"><a class="moreless-type" href="#${property.localName}">less ...</a></div>
+    				</p>
+    			</#if>
+    	
+    	<#if groupNameHtmlId != "research">
+            </article> <!-- end property -->
+    	</#if>
+    	</#list>
+    	
+
+        <#if groupNameHtmlId == "research">
+        	</ul>
+        	</article> <!-- end property -->
+        	<script type="text/javascript">
+				$(document).ready(function(){
+					$('ul#researchRoleList>li').tsort({order:'desc',attr:'sdate'});
+				});
+				$('#research_dropdown_options').on('change', function (e) {
+				    var optionSelected = $("option:selected", this);
+				    var valueSelected = this.value;
+				    if (valueSelected == 'oldest') {
+						$('ul#researchRoleList>li').tsort({attr:'sdate'});
+				    } else if (valueSelected == 'newest') {
+						$('ul#researchRoleList>li').tsort({order:'desc',attr:'sdate'});
+				    } else if (valueSelected == 'researchrole') {
+						$('ul#researchRoleList>li').tsort({order:'desc',attr:'sdate'}).tsort({attr:'researchrole'});
+				    }
+				});
+	    	</script>
+        </#if>
+    	
+    </section> <!-- end property-group -->
+</#list>

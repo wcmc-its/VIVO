@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#property-group-menu li:only-child").length&&($("#property-group-menu").hide(),$(".property-group").css("border-top","none"),$("nav.scroll-up").hide())});

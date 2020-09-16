@@ -1,0 +1,121 @@
+$visualization-btn-width: 174px;
+$visualization-btn-height: 30px;
+
+#individual-intro{
+    margin-top: 0;
+}
+#share-contact{
+    width: auto;
+    padding-right: 0;
+    margin-right: 1.5em;
+    // text-align: right;
+    h2{
+        font-weight: bold;
+        padding: 0;
+        margin-top: .75em;
+    }
+    h6{
+        font-weight: bold;
+    }
+}
+
+#individual-intro h1{
+    font-size: 1.8em;
+}
+
+#individual-intro span.display-title{margin-left: 0px;}
+
+#qrIcon{
+    display: none;
+}
+
+#individual-intro.person #individual-info {
+    width: 73%;
+}
+
+#property-group-menu{
+    margin: 0 0 20px;
+    border: 1px solid #ddd;
+}
+img.individual-photo, #photo-wrapper {
+    float: none;
+}
+img.individual-photo{
+    margin: 0;
+}
+.collaboratorship-icon{
+    float: none;
+    padding: 0;
+}
+.collaboratorship-link{
+    width: $visualization-btn-width;
+    height: $visualization-btn-height;
+    display: block;
+
+    a{
+        display: block;
+    }
+}
+.collaboratorship-link-container{
+    width: auto;
+    display: inline-block;
+}
+#coinvestigator_link_container{
+    // background: url('../images/investigatorBtn.png') no-repeat;
+}
+#coauthorship_link_container{
+    // background: url('../images/authorBtn.png') no-repeat;
+}
+
+ul#individual-phone li:first-child{
+    margin: 0;
+}
+
+// .rdfBtn{
+//     background: url('../images/rdfBtn.png') no-repeat;
+//     width: $visualization-btn-width;
+//     height: $visualization-btn-height;
+//     display: block;
+// }
+
+#visualization{
+    padding: 0;
+    float: none;
+}
+
+ul#individual-tools-people{
+    padding-bottom: 0;
+}
+
+ul#individual-tools-people li{
+    margin-bottom: 0;
+    padding:0;
+}
+.group-controls{
+    float: right;
+    margin: .75em 1.25em 0 0;
+}
+.more-less{
+    margin-top: 1em;
+}
+
+#scopusId{
+    line-height: 2;
+}
+
+#scopusIdList li{
+    display: inline;
+}
+.add-individual {
+    vertical-align: -2%;
+}
+
+h3 .add-individual[src $= "manage-icon.png"] {
+    -webkit-filter: brightness(.5);
+    -moz-filter: brightness(.5);
+}
+
+a.manageLinks{
+    float: none;
+    display: inline-block;
+}
