@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # VIVO: Connect, Share, Discover
 
 VIVO is an open source semantic web tool for research discovery -- finding people and the research they do.
@@ -37,3 +38,7 @@ The best place to get your hands dirty in the VIVO Project.
 Developers and implementers frequent this list to get the latest on feature design, 
 development, implementation, and testing.
 
+=======
+# VIVO
+This repo contains the WCM implementation of VIVO project.
+>>>>>>> a39eef3815647322602324207a85ac923d969e0b
