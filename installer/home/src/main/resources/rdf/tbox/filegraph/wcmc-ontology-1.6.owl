@@ -1,0 +1,605 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/arg/location.owl#"
+     xml:base="http://purl.obolibrary.org/obo/arg/location.owl"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:j.1="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    
+  <owl:Ontology rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc">
+    <rdfs:label xml:lang="en-US">Weill Cornell Medical College</rdfs:label>
+    <j.1:ontologyPrefixAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wcmc</j.1:ontologyPrefixAnnot>
+  </owl:Ontology>
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000112"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+  	<!-- cwid -->
+  	<owl:DatatypeProperty rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#cwid">
+  		<rdfs:label xml:lang="en-US">CWID</rdfs:label>
+  		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    	<rdfs:subPropertyOf rdf:resource="http://vivoweb.org/ontology/core#identifier"/>
+    	<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    	<obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CWID as assigned by ITS.</obo:IAO_0000115>
+    	<j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#selfEditor"/>
+    	<j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin"/>
+		<j.1:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</j.1:displayLimitAnnot>
+		<j.1:inPropertyGroupAnnot rdf:resource="http://vivoweb.org/ontology#vitroPropertyGroupidentifiers"/>
+    </owl:DatatypeProperty>
+
+	<!-- harvestedBy -->
+    <owl:DatatypeProperty rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#harvestedBy">
+    	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+		<rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+		<obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An indication of the data being ingested using the Harvester.</obo:IAO_0000112>
+    </owl:DatatypeProperty>
+    
+  <!-- OfficePhone -->
+  <owl:DatatypeProperty rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#officePhone">
+  	<rdfs:subPropertyOf rdf:resource="http://vivoweb.org/ontology/core#phoneNumber"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:label xml:lang="en-US">Office Phone</rdfs:label>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Office Phone at WCMC.</obo:IAO_0000115>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#selfEditor"/>
+    <j.1:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</j.1:displayLimitAnnot>
+  </owl:DatatypeProperty>
+
+  <!-- ClinicalPhone -->
+  <owl:DatatypeProperty rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#clinicalPhone">
+    <rdfs:label xml:lang="en-US">Clinical Phone</rdfs:label>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clinical Phone at WCMC.</obo:IAO_0000115>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#selfEditor"/>
+    <j.1:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</j.1:displayLimitAnnot>
+    <rdfs:subPropertyOf rdf:resource="http://vivoweb.org/ontology/core#phoneNumber"/>
+  </owl:DatatypeProperty>
+  
+  <!-- LaboratoryPhone -->
+  <owl:DatatypeProperty rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#laboratoryPhone">
+    <rdfs:label xml:lang="en-US">Laboratory Phone</rdfs:label>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laboratory Phone at WCMC.</obo:IAO_0000115>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#selfEditor"/>
+    <j.1:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</j.1:displayLimitAnnot>
+    <rdfs:subPropertyOf rdf:resource="http://vivoweb.org/ontology/core#phoneNumber"/>
+  </owl:DatatypeProperty>
+  
+  <!-- DepartmentalPhone -->
+  <owl:DatatypeProperty rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#departmentalPhone">
+    <rdfs:label xml:lang="en-US">Departmental Phone</rdfs:label>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Departmental Phone at WCMC.</obo:IAO_0000115>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#selfEditor"/>
+    <j.1:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</j.1:displayLimitAnnot>
+    <rdfs:subPropertyOf rdf:resource="http://vivoweb.org/ontology/core#phoneNumber"/>
+  </owl:DatatypeProperty> 
+  
+  <!-- personLabel -->
+  <owl:DatatypeProperty rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#personLabel">
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en-US">Person Label</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin"/>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Custom label for wcmc person.</obo:IAO_0000115>
+  </owl:DatatypeProperty>
+
+  <!-- Scopus Document Identifier -->
+  <owl:DatatypeProperty rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#scopusDocId">
+    <rdfs:label xml:lang="en-US">Scopus Document Identifier</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/Document"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scopus Document Identifier.</obo:IAO_0000115>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#selfEditor"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin"/>
+    <j.1:inPropertyGroupAnnot rdf:resource="http://vivoweb.org/ontology#vitroPropertyGroupidentifiers"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/bibo/identifier"/>
+    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/ontology/bibo/</rdfs:isDefinedBy>
+  </owl:DatatypeProperty>
+
+  <!-- Publication  -->
+  <owl:DatatypeProperty rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#language">
+    <rdfs:label xml:lang="en-US">Language</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/Document"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Publication Language.</obo:IAO_0000115>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin"/>
+    <j.1:inPropertyGroupAnnot rdf:resource="http://vivoweb.org/ontology#vitroPropertyGroupidentifiers"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/bibo/identifier"/>
+    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/ontology/bibo/</rdfs:isDefinedBy>
+  </owl:DatatypeProperty>
+  
+  <!-- Journal Abbreviation -->
+  <owl:DatatypeProperty rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#ISOAbbreviation">
+    <rdfs:label xml:lang="en-US">ISO Abbreviation</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/Journal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Journal Abbreviation.</obo:IAO_0000115>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin"/>
+    <j.1:inPropertyGroupAnnot rdf:resource="http://vivoweb.org/ontology#vitroPropertyGroupidentifiers"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/bibo/identifier"/>
+    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/ontology/bibo/</rdfs:isDefinedBy>
+  </owl:DatatypeProperty>
+  
+  <!-- ISSN Linking added by Sarbajit(szd2013)-->
+  <owl:DatatypeProperty rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#lissn">
+    <rdfs:label xml:lang="en-US">Linking ISSN</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/Journal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Linking ISSN.</obo:IAO_0000115>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin"/>
+    <j.1:inPropertyGroupAnnot rdf:resource="http://vivoweb.org/ontology#vitroPropertyGroupidentifiers"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/bibo/issn"/>
+    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/ontology/bibo/</rdfs:isDefinedBy>
+  </owl:DatatypeProperty>
+  
+  <!-- Primary Affiliation added by Prakash -->
+  <owl:DatatypeProperty rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#primaryAffiliation">
+    <rdfs:label xml:lang="en-US">Primary Affiliation</rdfs:label>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An affiliation designated as primary by the organization where it is held.</obo:IAO_0000115>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin"/>
+  </owl:DatatypeProperty>
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object types
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+     
+
+  <!-- hasMeSH -->
+  <owl:ObjectProperty rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#hasMesh">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/Document"/>
+    <j.1:inPropertyGroupAnnot rdf:resource="http://vivoweb.org/ontology#vitroPropertyGroupoverview"/>
+    <j.1:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</j.1:displayLimitAnnot>
+    <rdfs:subPropertyOf rdf:resource="http://vivoweb.org/ontology/core#hasAssociatedConcept"/>
+    <rdfs:label xml:lang="en-US">MeSH</rdfs:label>
+    <owl:inverseOf rdf:resource="http://weill.cornell.edu/vivo/ontology/wcmc#meshFor"/>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This relates to a documents MeSH terms in Scopus.</obo:IAO_0000115>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#meshFor">
+  	<owl:inverseOf rdf:resource="http://weill.cornell.edu/vivo/ontology/wcmc#hasMesh"/>
+  	<rdfs:subPropertyOf rdf:resource="http://vivoweb.org/ontology/core#conceptAssociatedWith"/>
+  </owl:ObjectProperty>
+
+  <!-- hasMeSHMajor -->
+  <owl:ObjectProperty rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#hasMeshMajor">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/Document"/>
+    <j.1:inPropertyGroupAnnot rdf:resource="http://vivoweb.org/ontology#vitroPropertyGroupoverview"/>
+    <j.1:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</j.1:displayLimitAnnot>
+    <rdfs:subPropertyOf rdf:resource="http://weill.cornell.edu/vivo/ontology/wcmc#hasMesh"/>
+    <rdfs:label xml:lang="en-US">MeSH Major</rdfs:label>
+    <owl:inverseOf rdf:resource="http://weill.cornell.edu/vivo/ontology/wcmc#meshMajorFor"/>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This relates to a documents MeSH Major terms in Scopus.</obo:IAO_0000115>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#meshMajorFor">
+  	<owl:inverseOf rdf:resource="http://weill.cornell.edu/vivo/ontology/wcmc#hasMeshMajor"/>
+  	<rdfs:subPropertyOf rdf:resource="http://vivoweb.org/ontology/core#conceptAssociatedWith"/>
+  </owl:ObjectProperty>
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+  <!-- FullTimeWCMCFaculty -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#FullTimeWCMCFaculty">
+  	<rdfs:label xml:lang="en-US">Full-Time WCMC Faculty</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#FacultyMember"/>
+    <j.1:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppeople"/>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anyone with employment full-time, and primary affiliation Weill Cornell Medical College, Cornell University or Weill Cornell Medical College-Qatar.</obo:IAO_0000115>
+  </owl:Class>
+  
+  <!-- PartTimeWCMCFaculty -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#PartTimeWCMCFaculty">
+  	<rdfs:label xml:lang="en-US">Part-Time WCMC Faculty</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#FacultyMember"/>
+    <j.1:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppeople"/>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anyone with employment part-time, and primary affiliation Weill Cornell Medical College, Cornell University or Weill Cornell Medical College-Qatar.</obo:IAO_0000115>
+  </owl:Class>
+  
+  <!-- VoluntaryFaculty -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#VoluntaryFaculty">
+  	<rdfs:label xml:lang="en-US">Voluntary Faculty</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#FacultyMember"/>
+    <j.1:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppeople"/>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anyone of type voluntary.</obo:IAO_0000115>
+  </owl:Class>
+  
+  <!-- AffiliatedFaculty -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#AffiliatedFaculty">
+  	<rdfs:label xml:lang="en-US">Affiliated Faculty</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#FacultyMember"/>
+    <j.1:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppeople"/>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anyone whose primary affiliation is not Weill Cornell Medical College, Cornell University" or Weill Cornell Medical College-Qatar.</obo:IAO_0000115>
+  </owl:Class>
+  
+  <!-- CourtesyFaculty -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#CourtesyFaculty">
+  	<rdfs:label xml:lang="en-US">Courtesy Faculty</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#FacultyMember"/>
+    <j.1:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppeople"/>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anyone with the word courtesy in their title.</obo:IAO_0000115>
+  </owl:Class>
+  
+  <!-- AdjunctFaculty -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#AdjunctFaculty">
+  	<rdfs:label xml:lang="en-US">Adjunct Faculty</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#FacultyMember"/>
+    <j.1:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppeople"/>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anyone with the word adjunct in their title.</obo:IAO_0000115>
+  </owl:Class>
+
+  <!-- Lecturer -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#Lecturer">
+  	<rdfs:label xml:lang="en-US">Lecturer</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#FacultyMember"/>
+    <j.1:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppeople"/>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anyone with the word lecturer in their position title.</obo:IAO_0000115>
+  </owl:Class>
+
+  <!-- Instructor -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#Instructor">
+  	<rdfs:label xml:lang="en-US">Instructor</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#FacultyMember"/>
+    <j.1:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppeople"/>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anyone with the word instructor in their position title.</obo:IAO_0000115>
+  </owl:Class>
+  
+  <!-- Fellow -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#Fellow">
+  	<rdfs:label xml:lang="en-US">Fellow</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#NonFacultyAcademic"/>
+    <j.1:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppeople"/>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anyone with the word fellow in their position title</obo:IAO_0000115>
+  </owl:Class>
+  
+  <!-- PhDStudent -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#PhDStudent">
+  	<rdfs:label xml:lang="en-US">PhD Student</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#GraduateStudent"/>
+    <j.1:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppeople"/>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any PhD student enrolled in the Tri-I graduate school</obo:IAO_0000115>
+  </owl:Class>
+  
+  <!-- ExternalEntity -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#ExternalEntity">
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin"/>
+    <j.1:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppeople"/>
+    <rdfs:label xml:lang="en-US">External Entity</rdfs:label>
+    <j.1:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayLimitAnnot>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Usually a non-WCMC researcher with joint publications with a WCMC researcher</obo:IAO_0000115>
+    <j.1:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayRankAnnot>
+  </owl:Class>
+  
+  <!-- Academic Research Position -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#AcademicResearchPosition">
+    <rdfs:label xml:lang="en-US">Academic Research Position</rdfs:label>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Position for faculty who is on academic research track</obo:IAO_0000115>
+    <j.1:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayLimitAnnot>
+    <j.1:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayRankAnnot>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin"/>
+    <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#FacultyPosition" />
+  </owl:Class>
+  
+  <!-- Academic Educator Position -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#AcademicEducatorPosition">
+    <rdfs:label xml:lang="en-US">Academic Educator Position</rdfs:label>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Position for faculty who is on academic educator track</obo:IAO_0000115>
+    <j.1:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayLimitAnnot>
+    <j.1:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayRankAnnot>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin"/>
+    <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#FacultyPosition" />
+  </owl:Class>
+  
+  <!-- Affiliate Clinical Position -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#AffiliateClinicalPosition">
+    <rdfs:label xml:lang="en-US">Affiliate Clinical Position</rdfs:label>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Position for faculty who is on affiliate clinical track</obo:IAO_0000115>
+    <j.1:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayLimitAnnot>
+    <j.1:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayRankAnnot>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin"/>
+    <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#FacultyPosition" />
+  </owl:Class>
+  
+  <!-- Academic Clinical Position -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#AcademicClinicalPosition">
+    <rdfs:label xml:lang="en-US">Academic Clinical Position</rdfs:label>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Position for faculty who is on academic clinical track</obo:IAO_0000115>
+    <j.1:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayLimitAnnot>
+    <j.1:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayRankAnnot>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin"/>
+    <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#FacultyPosition" />
+  </owl:Class>
+  
+  <!-- Clinical Position -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#ClinicalPosition">
+    <rdfs:label xml:lang="en-US">Clinical Position</rdfs:label>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Position for faculty who is on clinical track</obo:IAO_0000115>
+    <j.1:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayLimitAnnot>
+    <j.1:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayRankAnnot>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin"/>
+    <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#FacultyPosition" />
+  </owl:Class>
+  
+  <!-- Endowed Professorship Position -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#EndowedProfessorshipPosition">
+    <rdfs:label xml:lang="en-US">Endowed Professorship Position</rdfs:label>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Position for faculty who is on endowed professorship track</obo:IAO_0000115>
+    <j.1:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayLimitAnnot>
+    <j.1:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayRankAnnot>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin"/>
+    <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#FacultyPosition" />
+  </owl:Class>
+  
+  <!-- Research Position -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#ResearchPosition">
+    <rdfs:label xml:lang="en-US">Research Position</rdfs:label>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Position for non-faculty who is on research track</obo:IAO_0000115>
+    <j.1:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayLimitAnnot>
+    <j.1:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayRankAnnot>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin"/>
+    <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#FacultyPosition" />
+  </owl:Class>
+  
+  <!-- Tenure Position -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#TenurePosition">
+    <rdfs:label xml:lang="en-US">Tenure Position</rdfs:label>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Position for faculty who is on tenure track</obo:IAO_0000115>
+    <j.1:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayLimitAnnot>
+    <j.1:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayRankAnnot>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin"/>
+    <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#FacultyPosition" />
+  </owl:Class>
+  
+  <!-- Voluntary Position -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#VoluntaryPosition">
+    <rdfs:label xml:lang="en-US">Voluntary Position</rdfs:label>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Position for faculty who is on voluntary track</obo:IAO_0000115>
+    <j.1:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayLimitAnnot>
+    <j.1:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayRankAnnot>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin"/>
+    <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#FacultyPosition" />
+  </owl:Class>
+  
+  <!-- Joint Position -->
+  <owl:Class rdf:about="http://vivoweb.org/ontology/wcmc#JointPosition">
+  	<rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#Position" />
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A position designated as joint by WCMC.</obo:IAO_0000115>
+  </owl:Class>
+  
+  <!-- Dual Position -->
+  <owl:Class rdf:about="http://vivoweb.org/ontology/wcmc#DualPosition">
+  	<rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#Position" />
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A position designated as dual by WCMC.</obo:IAO_0000115>
+  </owl:Class>
+
+  <!-- WCMC AcademicProgram -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#AcademicProgram">
+    <rdfs:label xml:lang="en-US">Academic Program</rdfs:label>
+    <j.1:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouporganizations"/>
+    <j.1:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayLimitAnnot>
+    <j.1:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayRankAnnot>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin"/>
+    <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#Program"/>
+  </owl:Class>
+
+  <!-- WCMC Office -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#Office">
+    <rdfs:label xml:lang="en-US">Office</rdfs:label>
+    <j.1:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouporganizations"/>
+    <j.1:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayLimitAnnot>
+    <j.1:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayRankAnnot>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin"/>
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+  </owl:Class>
+  
+  <!-- Principal Investigator Subcontract -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#PrincipalInvestigatorSubcontractRole">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://vivoweb.org/ontology/core#InvestigatorRole"/>
+    </rdfs:subClassOf>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Role of a person designated as Principal Investigator in contracts with subcontract relationship between WCMC and some other institution. This person is typically a faculty member.</obo:IAO_0000115>
+    <rdfs:label xml:lang="en-US">Principal Investigator (Subcontract) Role</rdfs:label>
+    <j.1:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayLimitAnnot>
+    <j.1:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayRankAnnot>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin"/>
+  </owl:Class>
+  
+  <!-- Principal Investigator Subaward -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#PrincipalInvestigatorSubawardRole">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://vivoweb.org/ontology/core#InvestigatorRole"/>
+    </rdfs:subClassOf>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+    	Role of a person designated as Principal Investigator in grants with Subaward relationship between WCMC and some other institution. This person is typically a faculty member.
+    </obo:IAO_0000115>
+    <rdfs:label xml:lang="en-US">Principal Investigator (Subaward) Role</rdfs:label>
+    <j.1:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayLimitAnnot>
+    <j.1:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayRankAnnot>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin"/>
+  </owl:Class>
+
+  <!-- Key personnel -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#KeyPersonnelRole">
+  	<rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#InvestigatorRole"/>
+  	<obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Role of a person designated by a grantee as a key personnel. This person is typically a faculty member.</obo:IAO_0000115>
+    <rdfs:label xml:lang="en-US">Key Personnel Role</rdfs:label>
+    <j.1:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayLimitAnnot>
+    <j.1:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayRankAnnot>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin"/>
+  </owl:Class>
+  
+  <!-- Co-Investigator -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#CoInvestigatorRole">
+  	<rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#InvestigatorRole"/>
+  	<obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Role of a person designated by a grantee as a co-investigator. This person is typically a faculty member.</obo:IAO_0000115>
+    <rdfs:label xml:lang="en-US">Co-Investigator Role</rdfs:label>
+    <j.1:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayLimitAnnot>
+    <j.1:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayRankAnnot>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin"/>
+  </owl:Class>
+
+  <!-- Agreement Personnel -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#AgreementPersonnelRole">
+  	<rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#ResearcherRole"/>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Role of a person designated by a grantee as a personnel. This person is typically a non-faculty member.</obo:IAO_0000115>
+    <rdfs:label xml:lang="en-US">Personnel Role</rdfs:label>
+    <j.1:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayLimitAnnot>
+    <j.1:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayRankAnnot>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin"/>
+  </owl:Class>
+
+  <!-- Clinical Trial Agreement -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#ClinicalTrialAgreement">
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An agreement involving clinical trials</obo:IAO_0000115>
+    <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#Agreement"/>
+    <rdfs:label xml:lang="en-US">Clinical Trial Agreement</rdfs:label>
+    <j.1:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayLimitAnnot>
+    <j.1:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayRankAnnot>
+    <j.1:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGroupactivities"/>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin"/>
+  </owl:Class>
+
+  <!-- Sponsored Research Agreement -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#SponsoredResearchAgreement">
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An agreement involving sponsored research</obo:IAO_0000115>
+    <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#Agreement"/>
+    <rdfs:label xml:lang="en-US">Sponsored Research Agreement</rdfs:label>
+    <j.1:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayLimitAnnot>
+    <j.1:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayRankAnnot>
+    <j.1:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGroupactivities"/>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin"/>
+  </owl:Class>
+ 
+   <!-- Letter -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#Letter">
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An article that belongs to the type letter</obo:IAO_0000115>
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Article"/>
+    <rdfs:label xml:lang="en-US">Letter</rdfs:label>
+    <j.1:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayLimitAnnot>
+    <j.1:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayRankAnnot>
+    <j.1:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#selfEditor"/>
+  </owl:Class>
+ 
+  <!-- Comment -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#Comment">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Article"/>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An article that belongs to the type comment.</obo:IAO_0000115>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#selfEditor"/>
+    <j.1:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
+    <j.1:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayLimitAnnot>
+    <j.1:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayRankAnnot>
+    <rdfs:label xml:lang="en-US">Comment</rdfs:label>
+  </owl:Class>
+
+  <!-- In process -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#InProcess">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Article"/>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An article that is in the process.</obo:IAO_0000115>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#selfEditor"/>
+    <j.1:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
+    <j.1:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayLimitAnnot>
+    <j.1:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayRankAnnot>
+    <rdfs:label xml:lang="en-US">In process</rdfs:label>
+  </owl:Class>
+
+  <!-- Guideline -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#Guideline">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Article"/>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An article that belongs to the type guideline.</obo:IAO_0000115>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#selfEditor"/>
+    <j.1:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
+    <j.1:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayLimitAnnot>
+    <j.1:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayRankAnnot>
+    <rdfs:label xml:lang="en-US">Guideline</rdfs:label>
+  </owl:Class>
+
+  <!-- Erratum -->
+  <owl:Class rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#Erratum">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Article"/>
+    <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An article that belongs to the type erratum.</obo:IAO_0000115>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#selfEditor"/>
+    <j.1:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
+    <j.1:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayLimitAnnot>
+    <j.1:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</j.1:displayRankAnnot>
+    <rdfs:label xml:lang="en-US">Erratum</rdfs:label>
+  </owl:Class>
+
+</rdf:RDF>
