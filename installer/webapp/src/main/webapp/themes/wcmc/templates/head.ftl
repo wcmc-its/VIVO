@@ -77,7 +77,7 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
 an individual profile page. -->
 ${headContent!}
 
-<link rel="shortcut icon" type="image/x-icon" href="${urls.base}/favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="${urls.base}/themes/wcmc/favicon.ico">
 <!-- For third-generation iPad with high-resolution Retina display: -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png">
 
