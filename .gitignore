@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /.build/
 /.classpath
 /.project
@@ -44,4 +43,4 @@ utilities/rdbmigration/.work
 hs_err_pid*
 
 .svn*
->>>>>>> a39eef3815647322602324207a85ac923d969e0b
+.DS*
