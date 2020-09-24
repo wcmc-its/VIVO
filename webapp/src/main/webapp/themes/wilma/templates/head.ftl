@@ -35,4 +35,4 @@
 an individual profile page. -->
 ${headContent!}
 
-<link rel="shortcut icon" type="image/x-icon" href="${urls.base}/themes/wcmc/favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="${urls.base}/favicon.ico">
