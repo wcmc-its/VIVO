@@ -443,6 +443,66 @@ local:hasCo-PrincipalInvestigatorRoleConfig a :ObjectPropertyDisplayConfig ;
     vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.AddGrantRoleToPersonGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;
     :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupresearch> .
 
+local:hasPrincipalInvestigatorSubawardRoleContext a :ConfigContext ;
+    :hasConfiguration local:hasPrincipalInvestigatorSubawardRoleConfig ;
+    :configContextFor <http://purl.obolibrary.org/obo/RO_0000053> ;
+    :qualifiedByDomain  <http://xmlns.com/foaf/0.1/Person>  ;
+    :qualifiedBy      <http://weill.cornell.edu/vivo/ontology/wcmc#PrincipalInvestigatorSubawardRole> .
+
+local:hasPrincipalInvestigatorSubawardRoleConfig a :ObjectPropertyDisplayConfig ;
+    :listViewConfigFile "listViewConfig-hasPrincipalInvestigatorSubawardRole.xml"^^xsd:string ;
+    :displayName "principal investigator subaward on" ;
+    vitro:displayRankAnnot 25;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:dbAdmin ;
+    vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.AddGrantRoleToPersonGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;
+    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupresearch> .
+
+local:hasPrincipalInvestigatorSubcontractRoleContext a :ConfigContext ;
+    :hasConfiguration local:hasPrincipalInvestigatorSubcontractRoleConfig ;
+    :configContextFor <http://purl.obolibrary.org/obo/RO_0000053> ;
+    :qualifiedByDomain  <http://xmlns.com/foaf/0.1/Person>  ;
+    :qualifiedBy      <http://weill.cornell.edu/vivo/ontology/wcmc#PrincipalInvestigatorSubcontractRole> .
+
+local:hasPrincipalInvestigatorSubcontractRoleConfig a :ObjectPropertyDisplayConfig ;
+    :listViewConfigFile "listViewConfig-hasPrincipalInvestigatorSubcontractRole.xml"^^xsd:string ;
+    :displayName "principal investigator subcontract on" ;
+    vitro:displayRankAnnot 25;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:dbAdmin ;
+    vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.AddGrantRoleToPersonGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;
+    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupresearch> .
+
+local:hasKeyPersonnelRoleContext a :ConfigContext ;
+    :hasConfiguration local:hasKeyPersonnelRoleConfig ;
+    :configContextFor <http://purl.obolibrary.org/obo/RO_0000053> ;
+    :qualifiedByDomain  <http://xmlns.com/foaf/0.1/Person>  ;
+    :qualifiedBy      <http://weill.cornell.edu/vivo/ontology/wcmc#KeyPersonnelRole> .
+
+local:hasKeyPersonnelRoleConfig a :ObjectPropertyDisplayConfig ;
+    :listViewConfigFile "listViewConfig-hasKeyPersonnelRole.xml"^^xsd:string ;
+    :displayName "key personnel on" ;
+    vitro:displayRankAnnot 25;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:dbAdmin ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
+    vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.AddGrantRoleToPersonGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;
+    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupresearch> .
+    
+local:hasCoInvestigatorRoleContext a :ConfigContext ;
+    :hasConfiguration local:hasCoInvestigatorRoleConfig ;
+    :configContextFor <http://purl.obolibrary.org/obo/RO_0000053> ;
+    :qualifiedByDomain  <http://xmlns.com/foaf/0.1/Person>  ;
+    :qualifiedBy      <http://weill.cornell.edu/vivo/ontology/wcmc#CoInvestigatorRole> .
+
+local:hasCoInvestigatorRoleConfig a :ObjectPropertyDisplayConfig ;
+    :listViewConfigFile "listViewConfig-hasCoInvestigatorRole.xml"^^xsd:string ;
+    :displayName "co investigator on" ;
+    vitro:displayRankAnnot 25;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:dbAdmin ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
+    vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.AddGrantRoleToPersonGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;
+    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupresearch> .
+
 local:hasPresenterRoleContext a :ConfigContext ;
     :hasConfiguration local:hasPresenterRoleConfig ;
     :configContextFor <http://purl.obolibrary.org/obo/RO_0000053> ;
