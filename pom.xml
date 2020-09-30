@@ -278,6 +278,12 @@
                 <artifactId>vitro-dependencies</artifactId>
                 <version>${vitro-version}</version>
                 <type>pom</type>
+                <exclusions>
+                    <exclusion>
+                      <artifactId>org.apache.jena</artifactId>
+                      <groupId>jena-tdb</groupId>
+                    </exclusion>
+                  </exclusions>
             </dependency>
             <!-- https://mvnrepository.com/artifact/org.apache.jena/jena-tdb -->
             <dependency>
