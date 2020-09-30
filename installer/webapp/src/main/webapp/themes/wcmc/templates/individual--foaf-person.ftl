@@ -136,7 +136,7 @@
                         propertyGroups=propertyGroups
                         namespaces=namespaces
                         editable=editable
-                        directoryImageurl="/vivo/images/DirectoryGenericPhoto.png"
+                        directoryImageurl="/images/DirectoryGenericPhoto.png"
                         showPlaceholder="always"
                  />
                 </#assign>

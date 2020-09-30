@@ -484,7 +484,7 @@ DetailsPanel.prototype.groupInfo = function(i, group, mode, id) {
                             //.attr("src", contextPath + p.info["md_3"])
                         	.attr("src", "https://directory.weill.cornell.edu/person/profile/" + cwid + ".png?returnGenericOn404=true")	
                             .attr("width", 50)
-			    .attr("onError", "this.onerror=null;this.src='/vivo/images/DirectoryGenericPhoto.png';this.title='no image';this.alt='no image';")
+			    .attr("onError", "this.onerror=null;this.src='/images/DirectoryGenericPhoto.png';this.title='no image';this.alt='no image';")
                             .css({"float" : "right", "margin-top" : "10px", "clear" : "both"}))
                         )
                         .append($("<h3/>")

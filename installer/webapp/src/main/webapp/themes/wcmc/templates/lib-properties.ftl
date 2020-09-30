@@ -468,7 +468,7 @@ name will be used as the label. -->
     <#-- Don't assume that if the mainImage property is populated, there is a thumbnail image (though that is the general case).
          If there's a mainImage statement but no thumbnail image, treat it as if there is no image. -->
 	 <a href="${imageUrl}" title="${i18n().alt_thumbnail_photo}">
-         <img class="individual-photo" src="${imageUrl}" title = "${i18n().click_to_view_larger}" alt="${individual.name}" width="${imageWidth!}" onError="this.onerror=null;this.src='/vivo/images/DirectoryGenericPhoto.png';this.title='no image';this.alt='no image';"/>
+         <img class="individual-photo" src="${imageUrl}" title = "${i18n().click_to_view_larger}" alt="${individual.name}" width="${imageWidth!}" onError="this.onerror=null;this.src='/images/DirectoryGenericPhoto.png';this.title='no image';this.alt='no image';"/>
          </a>
 </#macro>
 
