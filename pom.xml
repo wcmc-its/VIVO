@@ -279,6 +279,12 @@
                 <version>${vitro-version}</version>
                 <type>pom</type>
             </dependency>
+            <!-- https://mvnrepository.com/artifact/org.apache.jena/jena-tdb -->
+            <dependency>
+                <groupId>org.apache.jena</groupId>
+                <artifactId>jena-tdb</artifactId>
+                <version>3.16.0</version>
+            </dependency>
             <dependency>
                 <groupId>org.vivoweb</groupId>
                 <artifactId>vitro-home</artifactId>
