@@ -28,46 +28,8 @@
             <groupId>org.vivoweb</groupId>
             <artifactId>vitro-dependencies</artifactId>
             <type>pom</type>
-            <exclusions>
-                <exclusion>
-                  <artifactId>org.apache.jena</artifactId>
-                  <groupId>jena-tdb</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>org.apache.jena</artifactId>
-                    <groupId>jena-arq</groupId>
-                  </exclusion>
-                  <exclusion>
-                    <artifactId>org.apache.jena</artifactId>
-                    <groupId>jena-core</groupId>
-                  </exclusion>
-                  <exclusion>
-                    <artifactId>org.apache.jena</artifactId>
-                    <groupId>jena-sdb</groupId>
-                  </exclusion>
-              </exclusions>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.jena/jena-tdb -->
-        <dependency>
-            <groupId>org.apache.jena</groupId>
-            <artifactId>jena-tdb</artifactId>
-            <version>3.16.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.jena</groupId>
-            <artifactId>jena-arq</artifactId>
-            <version>3.16.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.jena</groupId>
-            <artifactId>jena-core</artifactId>
-            <version>3.16.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.jena</groupId>
-            <artifactId>jena-sdb</artifactId>
-            <version>3.16.0</version>
-        </dependency>
         
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
