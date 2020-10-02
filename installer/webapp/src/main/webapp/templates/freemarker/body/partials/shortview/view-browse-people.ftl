@@ -6,9 +6,9 @@
 
 <li class="individual" role="listitem" role="navigation">
 
-<#assign cwid = "${individual.uri}"?replace("http://vivo.med.cornell.edu/individual/cwid-","") />
+<#assign cwid = "${individual.uri}"?replace("https://vivo.med.cornell.edu/individual/cwid-","") />
 <#assign imageUrl = "https://directory.weill.cornell.edu/api/v1/person/profile/${cwid}.png?returnGenericOn404=true" />
-<#if (individual.uri?contains('http://vivo.med.cornell.edu/individual/cwid-')) >
+<#if (individual.uri?contains('https://vivo.med.cornell.edu/individual/cwid-')) >
     <img class="individual-image" src="${imageUrl}" width="90" alt="${individual.name}" onError="this.onerror=null;this.src='/images/DirectoryGenericPhoto.png';"/>
 <#else>
 	<img class="individual-image" src="/images/DirectoryGenericPhoto.png" width="90" alt="${individual.name}"/>

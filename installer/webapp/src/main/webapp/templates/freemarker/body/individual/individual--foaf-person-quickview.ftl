@@ -22,8 +22,8 @@
 	<#assign languageCount = 1>
 </#if>	
 <#assign qrCodeIcon = "qr-code-icon.png">
-<#assign cwid = "${individual.uri}"?replace("http://vivo.med.cornell.edu/individual/cwid-","") />
-<#if (individual.uri?contains('http://vivo.med.cornell.edu/individual/cwid-')) >
+<#assign cwid = "${individual.uri}"?replace("https://vivo.med.cornell.edu/individual/cwid-","") />
+<#if (individual.uri?contains('https://vivo.med.cornell.edu/individual/cwid-')) >
                 <#assign individualImage>
                      <@p.directoryImage individual=individual
                       propertyGroups=propertyGroups

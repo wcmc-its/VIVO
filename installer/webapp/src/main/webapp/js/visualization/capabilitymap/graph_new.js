@@ -476,7 +476,7 @@ DetailsPanel.prototype.groupInfo = function(i, group, mode, id) {
         .append(
             group.people.reduce(function(div, p, i) {
             	cwid = p.id;
-            	cwid = cwid.replace("http://vivo.med.cornell.edu/individual/cwid-","");
+            	cwid = cwid.replace("https://vivo.med.cornell.edu/individual/cwid-","");
                 return div
                     .append($("<div>")
                         .addClass("person_details")

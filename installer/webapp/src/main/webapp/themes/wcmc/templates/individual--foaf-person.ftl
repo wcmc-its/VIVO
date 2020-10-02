@@ -117,9 +117,9 @@
     <#-- Property group menu -->
     <#include "individual-propertyGroupMenu.ftl">
     <section id="share-contact" role="region">
-	<#assign cwid = "${individual.uri}"?replace("http://vivo.med.cornell.edu/individual/cwid-","") />
+	<#assign cwid = "${individual.uri}"?replace("https://vivo.med.cornell.edu/individual/cwid-","") />
 	<#-- Image -->
-        <#if (individual.uri?contains('http://vivo.med.cornell.edu/individual/cwid-')) >
+        <#if (individual.uri?contains('https://vivo.med.cornell.edu/individual/cwid-')) >
                 <#assign individualImage>
                      <@p.directoryImage individual=individual
                       propertyGroups=propertyGroups

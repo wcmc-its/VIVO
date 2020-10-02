@@ -34,7 +34,7 @@ edu.cornell.mannlib.vitro.webapp.servlet.setup.FileGraphSetup
 edu.cornell.mannlib.vitro.webapp.migration.rel18.Release18Migrator
 
 #edu.cornell.mannlib.vitro.webapp.application.ApplicationImpl$ReasonersSetup
-#du.cornell.mannlib.vitro.webapp.servlet.setup.SimpleReasonerSetup
+#edu.cornell.mannlib.vitro.webapp.servlet.setup.SimpleReasonerSetup
 
 # Must run after JenaDataSourceSetup
 edu.cornell.mannlib.vitro.webapp.servlet.setup.ThemeInfoSetup
