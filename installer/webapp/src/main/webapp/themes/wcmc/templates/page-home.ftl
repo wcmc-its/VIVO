@@ -42,7 +42,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     
     <body class="${bodyClasses!}" onload="${bodyOnload!}">
         <#include "identity.ftl">
-
+        <#include "developer.ftl">
         <#include "menu.ftl">
 
         <section id="intro" role="region">
