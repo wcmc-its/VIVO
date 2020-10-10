@@ -161,7 +161,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 				<#assign subclassType = "${wcmcType}">
 			</#if>
 
-			<span class="publication-type">${subclassType?replace("([A-Z])", "&nbsp;$1", "rc")?replace("^&nbsp;", "", "rc")}</span>
+			<span class="publication-type">${subclassType?replace("([A-Z])", "&nbsp;$1", "rc")?replace("^&nbsp;", "", "rc")?replace("http://purl.org/spar/fabio", "")}</span>
         </#if>
     </#local>
     
