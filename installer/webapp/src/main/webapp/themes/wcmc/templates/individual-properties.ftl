@@ -27,7 +27,14 @@
         <#if (groupName?has_content && group.properties?size > 0) >
     		<#--the function replaces spaces in the name with underscores, also called for the property group menu-->
         	<#assign groupNameHtmlId = p.createPropertyGroupHtmlId(groupName) >
-            <h2 id="${groupNameHtmlId}">${groupName?capitalize}</h2>
+			<#if groupNameHtmlId == "external_relationships">
+				<div class="tooltip">
+					<img class="whatisthisquestion" src="https://www.dropbox.com/s/hyk140yichqdc89/question4.png?dl=1"> 
+					<span id="tooltip-what">What is this?</span>
+					<span class="tooltiptext"><strong>External relationships:</strong> Relationships and collaborations with for-profit and not-for-profit organizations are of vital importance to our faculty because these exchanges of scientific information foster innovation. As experts in their fields, WCM physicians and scientists are sought after by many organizations to consult and educate. WCM and its faculty make this information available to the public, thus creating a transparent environment</span>
+				</div>
+			</#if>
+            <h2 id="${groupNameHtmlId}">${groupName?capitalize}</h2>			
 
             <#if groupNameHtmlId == "publications">
             	<div class="group-controls">

@@ -281,6 +281,7 @@ var i18nStringsUriRdf = {
 
 ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/css/individual/individual.css" />',
                   '<link rel="stylesheet" href="${urls.base}/css/individual/individual-vivo.css" />',
+                  '<link rel="stylesheet" href="${urls.base}/themes/wcmc/css/wcmc_coi.css" />',
                   '<link rel="stylesheet" href="${urls.base}/css/individual/individual-2column-view.css" />',
                   '<link rel="stylesheet" href="${urls.base}/js/jquery-ui/css/smoothness/jquery-ui-1.8.9.custom.css" />')}
 
