@@ -136,4 +136,12 @@
     <vitro:modTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2009-12-28T13:05:00</vitro:modTime>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://vivoweb.org/ontology#vitroExternalRelationships">
+    <vitro:displayRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2035</vitro:displayRank>
+    <vitro:modTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-202T14:16:01</vitro:modTime>
+    <rdfs:label xml:lang="en-US">external relationships</rdfs:label>
+    <rdf:type rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup"/>
+    <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">properties holding external relationships from InfoED</vitro:publicDescriptionAnnot>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
 </rdf:RDF>
