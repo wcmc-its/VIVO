@@ -6,8 +6,9 @@
 	font-size: 0.9em;
 }
 
-#conflicts {
+#conflict-container {
 	display: table;
+	margin-top: 20px;
 }
 
 .conflict {
@@ -19,7 +20,7 @@
 	width: 240px;
 	font-weight: bold;
 	display: table-cell;
-	padding: 2px;
+	padding: 15px;
 }
 
 .activity-group-data {
