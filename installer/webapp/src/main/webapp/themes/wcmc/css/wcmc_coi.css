@@ -8,7 +8,6 @@
 
 #conflict-container {
 	display: table;
-	margin-top: 20px;
 }
 
 .conflict {
@@ -20,7 +19,7 @@
 	width: 240px;
 	font-weight: bold;
 	display: table-cell;
-	padding: 15px;
+	padding: 11px;
 }
 
 .activity-group-data {
