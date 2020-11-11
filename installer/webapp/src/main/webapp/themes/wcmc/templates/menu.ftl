@@ -26,6 +26,10 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
+<#if (user.loggedIn && user.hasSiteAdminAccess)>
+    <#include "developer.ftl">
+</#if>
+
 <nav role="navigation">
     <ul id="main-nav" role="list">
         <#list menu.items as item>
