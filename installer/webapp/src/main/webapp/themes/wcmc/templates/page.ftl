@@ -39,7 +39,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </head>
     
     <body class="${bodyClasses!}" onload="${bodyOnload!}">
-        <#include "developer.ftl">
         <#include "identity.ftl">
         <#include "menu.ftl">
 
