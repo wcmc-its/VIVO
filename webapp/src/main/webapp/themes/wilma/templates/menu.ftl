@@ -2,7 +2,7 @@
 
 </header>
 
-<#include "developer.ftl">
+<#-- <#include "developer.ftl"> -->
 
 <nav role="navigation">
     <ul id="main-nav" role="list">
