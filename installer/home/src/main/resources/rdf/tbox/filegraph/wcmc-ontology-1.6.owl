@@ -614,4 +614,16 @@
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </owl:DatatypeProperty>
 
+  <!-- Research Opportunities -->
+  <owl:DatatypeProperty rdf:about="http://weill.cornell.edu/vivo/ontology/wcmc#researchOpportunities">
+    <rdfs:label xml:lang="en-US">Research opportunities</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <j.1:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <j.1:inPropertyGroupAnnot rdf:resource="http://vivoweb.org/ontology#vitroPropertyGroupresearch"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
 </rdf:RDF>
