@@ -1,29 +1,15 @@
-/* Conflicts content */
-
-#conflicts-description {
-	font-style: italic;
-	margin-top: -14px;
-	font-size: 0.9em;
+.conflicts-explanation {
+	margin-top: -5px;
+	margin-right: 10px;
 }
 
-#conflict-container {
-	display: table;
-}
-
-.conflict {
-	display: table-row;
-}
-
-.activity-group-label {
-	text-align: right;
-	width: 240px;
-	font-weight: bold;
-	display: table-cell;
-	padding: 11px;
-}
-
-.activity-group-data {
-	display: table-cell;
+#grid-container {
+	display: grid;
+	grid-template-columns: 250px 500px;
+	grid-gap: 18px;
+	padding: 10px;
+	margin-top: 28px;
+	background: transparent;
 }
 
 #externalRelationships {
@@ -35,19 +21,37 @@ ul#externalRelationshipsnoRangeClassList {
 	padding: 0;
 }
 
-/* Conflicts "what is this" mouseover */
+#grid-container>div {
+	background-color: rgba(255, 255, 255, 0.8);
+	text-align: right;
+	padding: 0;
+}
+
+.conflicts-list {
+	text-align: left !important;
+}
+
+.conflicts-description {
+	text-align: right !important;
+	font-weight: bold;
+	margin-top: 0px;
+}
 
 .tooltip {
 	position: relative;
 	display: inline-block;
-	float: right;
-	margin-right: 25px;
-	bottom: -4px;
+	margin-right: 0px !important;
+	font-weight: bold;
 }
 
 #tooltip-what {
-	color: rgb(126, 41, 48);
-	border-bottom: solid 1px rgb(126, 41, 48);
+	color: #000 !important;
+	border-bottom: 0px !important;
+}
+
+.whatisthisquestion {
+	margin-bottom: -5px;
+	margin-right: 5px;
 }
 
 .tooltip .tooltiptext {
@@ -55,15 +59,16 @@ ul#externalRelationshipsnoRangeClassList {
 	width: 470px;
 	background-color: #fff;
 	text-align: left;
+	font-weight: normal;
 	line-height: 1.4em;
 	border-radius: 6px;
 	border: 1px #ccc solid;
 	padding: 20px;
 	position: absolute;
 	z-index: 1;
-	top: 150%;
+	top: 140%;
 	left: 10%;
-	margin-left: -430px;
+	margin-left: -80px;
 	border-radius: 2px;
 	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -79,22 +84,6 @@ ul#externalRelationshipsnoRangeClassList {
 	border-color: transparent transparent green transparent;
 }
 
-.tooltip .tooltiptext::after {
-	content: "";
-	position: absolute;
-	bottom: 100%;
-	left: 85%;
-	margin-left: -5px;
-	border-width: 10px;
-	border-style: solid;
-	border-color: transparent transparent #ccc transparent;
-}
-
 .tooltip:hover .tooltiptext {
 	visibility: visible;
 }
-
-.whatisthisquestion {
-	margin-bottom: -5px;
-}
-/* Conflict end*/
