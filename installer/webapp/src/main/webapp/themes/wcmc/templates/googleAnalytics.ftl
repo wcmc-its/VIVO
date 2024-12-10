@@ -29,7 +29,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 <#-- NOTICE: This is SAMPLE Google Analytics code. You must replace it with your institution's code. 
 Please see documentation at https://confluence.cornell.edu/display/ennsrd/Google+Analytics+for+UI. -->
 
-<script type="text/javascript">  
+<#-- <script type="text/javascript">
     try { 
     
     	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -43,4 +43,4 @@ Please see documentation at https://confluence.cornell.edu/display/ennsrd/Google
 } 
 
 catch(err) {}  
-</script>
+</script> -->
